@@ -1,1 +1,18 @@
-<p>ng-if works!</p>
+<span class="file-name">ng-if.component.html</span>
+
+<div>
+  <h3>Select/Change Selected Option to show/hide the content</h3>
+
+<select name="" id="" [(ngModel)]="selectedValue">
+  <option value="" selected>-- Select an option --</option>
+  <option *ngFor="let state of selectionList" [ngValue]="state">{{ state }}</option>
+</select>
+
+<div *ngIf="selectedValue">Show the Content</div>
+<div *ngIf="selectedValue === false">Hide the Content</div>
+
+<!-- <pre>{{ selectedValue }}</pre> -->
+
+<pre>Note: Only the condition is TRUE then will appear the element in DOM (it will remove from DOM if false)</pre>
+
+</div>

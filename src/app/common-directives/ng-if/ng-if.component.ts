@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ng-if.component.css']
 })
 export class NgIfComponent implements OnInit {
+  selectionList = [true, false];
+  selectedValue = true;
+  inputData;
 
   constructor() { }
 

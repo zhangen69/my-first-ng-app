@@ -1,6 +1,6 @@
 <span class="file-name">template-driven-form.component.html</span>
 
-<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+<form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
   <div class="form-group">
     <label for="username">*Username</label>
     <input type="text" id="username" name="username" [(ngModel)]="user.username" required>
@@ -16,5 +16,5 @@
   <button type="submit" [disabled]="f.invalid">Submit</button>
 </form>
 
-<div *ngIf="!!formValue">Form Value: {{ formValue | json }}</div>
-
+<div>Form Status: {{ f.status }}</div>
+<div>Form Controls: <pre>{{ getControlsMessage(f) | json }}</pre></div>

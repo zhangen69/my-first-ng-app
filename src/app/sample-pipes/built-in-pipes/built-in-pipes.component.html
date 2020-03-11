@@ -1,1 +1,10 @@
-<p>built-in-pipes works!</p>
+<span class="file-name">built-in-pipes.component.html</span>
+
+<div>{{ message }} (uppercase): {{ message | uppercase }}</div>
+<div>{{ message }} (lowercase): {{ message | lowercase }}</div>
+<div>{{ price }} (number): {{ price | number }}</div>
+<div>{{ price }} (number, '1.0-0', Math.round()): {{ price | number: '1.0-0' }}</div>
+<div>{{ price }} (currency): {{ price | currency }}</div>
+<div>{{ price }} (currency, 'RM '): {{ price | currency: 'RM ' }}</div>
+<div>{{ date }} (date): {{ date | date }}</div>
+<div>{{ date }} (date, 'MMM dd, yyyy'): {{ date | date: 'MMM dd, yyyy' }}</div>

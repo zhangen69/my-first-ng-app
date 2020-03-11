@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./built-in-pipes.component.css']
 })
 export class BuiltInPipesComponent implements OnInit {
+  message = 'This is a message';
+  price = 2354.1234;
+  date = new Date();
 
   constructor() { }
 

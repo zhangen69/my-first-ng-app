@@ -5,8 +5,14 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class SamplePipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(products: any[]): number {
+    if (!products) {
+      return 0;
+    }
+
+    return products.reduce((sum, item) => {
+      return sum + item.price * item.quantity;
+    }, 0);
   }
 
 }

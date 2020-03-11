@@ -1,0 +1,13 @@
+<span class="file-name">product-cart.component.html</span>
+
+<h3>Products In Cart</h3>
+<div *ngFor="let item of products">
+  <div>Name: {{ item.name }}</div>
+  <div>Price: {{ item.price | currency: 'RM ' }}</div>
+  <div>Quantity: {{ item.quantity }}</div>
+  <div>
+    <button type="button" (click)="updateProductQuantity(item, 1)">+1</button>
+    <button type="button" (click)="updateProductQuantity(item, -1)" *ngIf="item.quantity > 1">-1</button>
+    <button type="button" (click)="removeProduct(item)">Remove</button>
+  </div>
+</div>

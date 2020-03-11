@@ -1,1 +1,14 @@
-<p>sample-service works!</p>
+<span class="file-name">sample-service.component.html</span>
+
+<div class="parallel-box">
+  <div>
+    <div *ngFor="let item of productList">
+      <div>Name: {{ item.name }}</div>
+      <div>Price: {{ item.price | currency: 'RM ' }}</div>
+      <div><button type="button" (click)="addToCard(item)">Add to Card</button></div>
+    </div>
+  </div>
+
+  <app-product-cart></app-product-cart>
+
+</div>

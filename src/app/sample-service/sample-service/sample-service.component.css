@@ -1,0 +1,10 @@
+.parallel-box {
+  display: flex;
+  flex-direction: row;
+}
+
+.parallel-box > * {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}

@@ -1,1 +1,19 @@
-<p>ng-switch works!</p>
+<span class="file-name">ng-switch.component.html</span>
+
+<h3>A structural directive that adds or removes templates (displaying or hiding views) when the next match expression matches the switch expression.</h3>
+
+<select name="" id="" [(ngModel)]="selectedValue">
+  <option value="">-- Select an option --</option>
+  <option value="text">Text</option>
+  <option value="number">Number</option>
+  <option value="date">Date</option>
+</select>
+
+<div *ngIf="!!selectedValue">You are selected {{ selectedValue }} option.</div>
+
+<ng-container [ngSwitch]="selectedValue">
+  <input type="text" *ngSwitchCase="'text'">
+  <input type="number" *ngSwitchCase="'number'">
+  <input type="date" *ngSwitchCase="'date'">
+  <div *ngSwitchDefault>Please select an option.</div>
+</ng-container>

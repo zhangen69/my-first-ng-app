@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-two-way-binding',
@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./two-way-binding.component.css']
 })
 export class TwoWayBindingComponent implements OnInit {
+  @ViewChild('demoInput') demoInput;
+  input = 'test';
+  inputObject = {
+    data: 'test'
+  };
 
   constructor() { }
 

@@ -1,3 +1,6 @@
-<h1>one-way-binding works!</h1>
-<input type="text" [ngModel]="input" placeholder="Enter Some Value">
-<app-sample [inputData]="input" (outputFunction)="triggerFunction($event)"></app-sample>
+<span class="file-name">one-way-binding.component.html</span>
+
+<h3>Original Value: {{ input }}</h3>
+<h3>Initial the html input with Original Value</h3>
+<input type="text" [value]="input" placeholder="Enter Some Value">
+<pre>Change the input value that won't the original value</pre>

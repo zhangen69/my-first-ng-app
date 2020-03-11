@@ -1,4 +1,5 @@
-<h1>shared/sample.component.ts is worked!</h1>
+<span class="file-name">sample.component.html</span>
 <h3>{{ state }}</h3>
-<h3 *ngIf="!!inputData">Input: {{ inputData }}</h3>
-<button (click)="sendOutout()">Click Me!</button>
+<h3 *ngIf="!!inputData">Input: {{ inputData.data }}</h3>
+<input type="text" [(ngModel)]="inputData.data">
+<button *ngIf="hasOutput" (click)="sendOutout()">Click Me!</button>

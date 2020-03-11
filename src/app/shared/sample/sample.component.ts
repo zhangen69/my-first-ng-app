@@ -12,8 +12,9 @@ enum ComponentState {
   styleUrls: ['./sample.component.css']
 })
 export class SampleComponent implements OnInit {
-  @Input() inputData: any = null;
+  @Input() inputData;
   @Output() outputFunction = new EventEmitter<string>();
+  hasOutput: boolean;
   state: string;
 
   constructor() {
@@ -24,6 +25,7 @@ export class SampleComponent implements OnInit {
     // } else if (this.outputFunction) {
     //   this.state = ComponentState[ComponentState.HasOutputOnly];
     // }
+    this.hasOutput = this.outputFunction.observers.length > 0;
   }
 
   ngOnInit(): void {

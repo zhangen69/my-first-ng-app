@@ -1,1 +1,10 @@
-<p>two-way-binding works!</p>
+<span class="file-name">two-way-binding.component.html</span>
+<h3>Original Value: {{ input }}</h3>
+<h3>Initial the html input with Original Value</h3>
+<input type="text" [(ngModel)]="input" placeholder="Enter Some Value" #demoInput>
+<pre>Change the input value that will update the original value automatically</pre>
+<div class="box">
+  <h3>Original Object: {{ inputObject | json }}</h3>
+  <app-sample [(inputData)]="inputObject"></app-sample>
+  <pre>Change the input object that will update the original object automatically, two binding only work with reference type (array, object, function)</pre>
+</div>

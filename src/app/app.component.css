@@ -1,0 +1,14 @@
+.navigations-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.navigations-wrapper > .navigation-item {
+  flex-grow: 1;
+}
+
+.content {
+  border: 1px solid #f00;
+  padding: 10px 25px;
+}

@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+.file-name {
+  background-color: #cdc;
+  padding: 3px;
+  font-style: italic;
+}

@@ -1,3 +1,46 @@
-<h1>app.component.html is worked!</h1>
-<app-one-way-binding></app-one-way-binding>
+<span class="file-name">app.component.html</span>
+<h3>Navigations:</h3>
+<a routerLink="/">Home</a>
+<div class="navigations-wrapper">
+  <div class="navigation-item">
+    <h3>Data Binding</h3>
+    <ul>
+      <li><a routerLink="/data-binding/one-way-binding">One Way Binding</a></li>
+      <li><a routerLink="/data-binding/two-way-binding">Two Way Binding</a></li>
+      <li><a routerLink="/data-binding/interporation">Interporation Binding</a></li>
+    </ul>
+  </div>
+  <div class="navigation-item">
+    <h3>Common Directive</h3>
+    <ul>
+      <li><a routerLink="/common-directives/ng-if">NgIf</a></li>
+      <li><a routerLink="/common-directives/ng-for">NgFor</a></li>
+      <li><a routerLink="/common-directives/ng-switch">NgSwitch</a></li>
+    </ul>
+  </div>
+  <div class="navigation-item">
+    <h3>Service</h3>
+    <ul>
+      <li><a routerLink="/sample-service">Sample Service</a></li>
+    </ul>
+  </div>
+  <div class="navigation-item">
+    <h3>Pipes</h3>
+    <ul>
+      <li><a routerLink="/pipes/built-in">Built-in Pipes</a></li>
+      <li><a routerLink="/pipes/custom">Custom Pipes</a></li>
+    </ul>
+  </div>
+  <div class="navigation-item">
+    <h3>Forms</h3>
+    <ul>
+      <li><a routerLink="/ng-forms/reactive">Reactive Form</a></li>
+      <li><a routerLink="/ng-forms/template-driven">Template-Driven Form</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
 

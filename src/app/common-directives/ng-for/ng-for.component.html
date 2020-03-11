@@ -7,7 +7,6 @@
   </li>
 </ul>
 
-
 <h2>ForLoop Components (passing property into another component)</h2>
 <app-sample *ngFor="let item of productList" [inputString]="item.name"></app-sample>
 
@@ -15,4 +14,3 @@
 <ng-template #sampleTemplate ngFor let-item [ngForOf]="productList">
   <pre>{{ item | json }}</pre>
 </ng-template>
-

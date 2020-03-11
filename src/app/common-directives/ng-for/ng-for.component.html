@@ -1,1 +1,18 @@
-<p>ng-for works!</p>
+<span class="file-name">ng-for.component.html</span>
+
+<h2>ForLoop Unordered List</h2>
+<ul>
+  <li *ngFor="let item of productList">
+    Name: {{ item.name }} (Price: {{ item.price | currency: 'RM ' }})
+  </li>
+</ul>
+
+
+<h2>ForLoop Components (passing property into another component)</h2>
+<app-sample *ngFor="let item of productList" [inputString]="item.name"></app-sample>
+
+<h2>ForLoop NgTemplate</h2>
+<ng-template #sampleTemplate ngFor let-item [ngForOf]="productList">
+  <pre>{{ item | json }}</pre>
+</ng-template>
+

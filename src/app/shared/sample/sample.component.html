@@ -1,5 +1,13 @@
 <span class="file-name">sample.component.html</span>
-<h3>{{ state }}</h3>
-<h3 *ngIf="!!inputData">Input: {{ inputData.data }}</h3>
-<input type="text" [(ngModel)]="inputData.data">
+
+<div *ngIf="!!inputObject">
+  <h3>Input: {{ inputObject.data }}</h3>
+  <input type="text" [(ngModel)]="inputObject.data">
+</div>
+
+<div *ngIf="!!inputString">
+  <h3>Input: {{ inputString }}</h3>
+  <input type="text" [(ngModel)]="inputString">
+</div>
+
 <button *ngIf="hasOutput" (click)="sendOutout()">Click Me!</button>

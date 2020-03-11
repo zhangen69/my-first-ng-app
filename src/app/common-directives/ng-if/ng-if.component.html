@@ -8,6 +8,7 @@
   <option *ngFor="let state of selectionList" [ngValue]="state">{{ state }}</option>
 </select>
 
+<!-- <div *ngIf="selectedValue; else ifFalseTemplate">Show the Content</div> -->
 <div *ngIf="selectedValue">Show the Content</div>
 <div *ngIf="selectedValue === false">Hide the Content</div>
 
@@ -16,3 +17,8 @@
 <pre>Note: Only the condition is TRUE then will appear the element in DOM (it will remove from DOM if false)</pre>
 
 </div>
+
+<ng-template #ifFalseTemplate>
+  <h2>Used this template if condition is false white using NgIfElse syntax</h2>
+</ng-template>
+

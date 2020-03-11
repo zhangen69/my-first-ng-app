@@ -1,1 +1,30 @@
-<p>reactive-form works!</p>
+<span class="file-name">reactive-form.component.html</span>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+  <div class="form-group">
+    <label for="username">username</label>
+    <input type="text" formControlName="username">
+    <div *ngIf="form.controls.username.invalid && (form.controls.username.dirty || form.controls.username.touched) && form.controls.username.errors.required">
+      username is required.
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" formControlName="password">
+  </div>
+  <div class="form-group">
+    <label for="dob">Date of Birth</label>
+    <input type="date" formControlName="dob">
+  </div>
+  <button type="submit" [disabled]="form.invalid">Submit</button>
+</form>
+
+<div *ngIf="!!formValue">Form Value: {{ formValue | json }}</div>
+
+<div>Form Status: {{ form.status }}</div>
+<div>
+  Form Controls:
+
+<pre>{{ getControlsMessage() | json }}</pre>
+
+</div>
